@@ -37,7 +37,7 @@ function App() {
   
   // ------------Recipes--api
   const getRecipes = async () => {
-    const response = await axios.get("http://localhost:5000/api/recipes")
+    const response = await axios.get("https://recipes-api-1.herokuapp.com/api/recipes")
     setRecipes(response.data)
   }
 
@@ -47,7 +47,7 @@ function App() {
   }, [])
   // -------get profile
   const getProfile = async () => {
-    const response = await axios.get("http://localhost:5000/api/auth/profile", {
+    const response = await axios.get("https://recipes-api-1.herokuapp.com/api/auth/profile", {
       headers: {
         Authorization: localStorage.tokenRecipes,
       },
@@ -68,7 +68,7 @@ function App() {
         password: form.elements.password.value,
       }
 
-      await axios.put("http://localhost:5000/api/auth/profile", profileBody, {
+      await axios.put("https://recipes-api-1.herokuapp.com/api/auth/profile", profileBody, {
         headers: {
           Authorization: localStorage.tokenRecipes,
         },
@@ -94,7 +94,7 @@ function App() {
         avatar: form.elements.avatar.value,
       }
 
-      await axios.post("http://localhost:5000/api/auth/signup", userBody)
+      await axios.post("https://recipes-api-1.herokuapp.com/api/auth/signup", userBody)
       console.log("signup success")
     } catch (error) {
       if (error.response) console.log(error.response.data)
@@ -112,7 +112,7 @@ function App() {
         password: form.elements.password.value,
       }
 
-      const response = await axios.post("http://localhost:5000/api/auth/login", userBody)
+      const response = await axios.post("https://recipes-api-1.herokuapp.com/api/auth/login", userBody)
 
       const token = response.data
       localStorage.tokenRecipes = token
@@ -148,7 +148,7 @@ function App() {
         types: form.elements.types.value,
         steps: form.elements.steps.value,
       }
-      await axios.post(`http://localhost:5000/api/recipes`, recipeBody, {
+      await axios.post(`https://recipes-api-1.herokuapp.com/api/recipes`, recipeBody, {
         headers: {
           Authorization: localStorage.tokenRecipes,
         },
@@ -177,7 +177,7 @@ function App() {
         steps: form.elements.steps.value,
       }
 
-      await axios.put(`http://localhost:5000/api/recipes/${recipeId}`, recipeBody, {
+      await axios.put(`https://recipes-api-1.herokuapp.com/api/recipes/${recipeId}`, recipeBody, {
         headers: {
           Authorization: localStorage.tokenRecipes,
         },
@@ -193,7 +193,7 @@ function App() {
   // ---------delet recipe
   const deleteRecipe = async recipeId => {
     try {
-      await axios.delete(`http://localhost:5000/api/recipes/${recipeId}`, {
+      await axios.delete(`https://recipes-api-1.herokuapp.com/api/recipes/${recipeId}`, {
         headers: {
           Authorization: localStorage.tokenRecipes,
         },
@@ -214,7 +214,7 @@ function App() {
       const ratingBody = {
         rating,
       }
-      await axios.post(`http://localhost:5000/api/recipes/${recipeId}/rating`, ratingBody, {
+      await axios.post(`https://recipes-api-1.herokuapp.com/api/recipes/${recipeId}/rating`, ratingBody, {
         headers: {
           Authorization: localStorage.tokenRecipes,
         },
@@ -237,7 +237,7 @@ function App() {
       }
 
       form.reset()
-      await axios.post(`http://localhost:5000/api/recipes/${recipeId}/comments`, commentBody, {
+      await axios.post(`https://recipes-api-1.herokuapp.com/api/recipes/${recipeId}/comments`, commentBody, {
         headers: {
           Authorization: localStorage.tokenRecipes,
         },
@@ -259,7 +259,7 @@ function App() {
       }
 
       form.reset()
-      await axios.put(`http://localhost:5000/api/recipes/${recipeId}/comments/${commentId}`, commentBody, {
+      await axios.put(`https://recipes-api-1.herokuapp.com/api/recipes/${recipeId}/comments/${commentId}`, commentBody, {
         headers: {
           Authorization: localStorage.tokenRecipes,
         },
@@ -274,7 +274,7 @@ function App() {
   // --------------delete Comment---------
   const deleteComment = async (recipeId, commentId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/recipes/${recipeId}/comments/${commentId}`, {
+      await axios.delete(`https://recipes-api-1.herokuapp.com/api/recipes/${recipeId}/comments/${commentId}`, {
         headers: {
           Authorization: localStorage.tokenRecipes,
         },
@@ -291,7 +291,7 @@ function App() {
   // ------Add Like---------------
   const likeRecipe = async recipeId => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/recipes/${recipeId}/likes`, {
+      const response = await axios.get(`https://recipes-api-1.herokuapp.com/api/recipes/${recipeId}/likes`, {
         headers: {
           Authorization: localStorage.tokenRecipes,
         },

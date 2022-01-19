@@ -1,5 +1,7 @@
 import { useContext } from "react"
 import { Form, Col, Row, Button, Modal } from "react-bootstrap"
+import { AiOutlineCloseSquare } from "react-icons/ai"
+import { GoSignIn } from "react-icons/go"
 import RecipesContext from "../utils/RecipesContext"
 
 function SignUp() {
@@ -66,10 +68,10 @@ function SignUp() {
           </Modal.Body>
           <Modal.Footer>
             <Button variant="outline-warning" type="submit">
-              Sign up
+              <GoSignIn />
             </Button>
-            <Button onClick={handleCloseSignup} variant="outline-success">
-              Close
+            <Button variant="outline-secondary" onClick={handleCloseSignup}>
+              <AiOutlineCloseSquare />
             </Button>
           </Modal.Footer>
         </Form>

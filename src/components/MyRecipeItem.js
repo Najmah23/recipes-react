@@ -10,7 +10,7 @@ function MyRecipeItem(props) {
   const [editShow, setEditShow] = useState(false)
   return (
     <>
-      <Col md="3">
+      <Col md="3" style={{marginTop:"35px"}} >
         <Card style={{ maxWidth: "350px" }}>
           <Link
             to={`/recipes/${recipe._id}`}
@@ -22,7 +22,7 @@ function MyRecipeItem(props) {
             <ListGroup className="imagCard">
               <ListGroupItem style={{ textDecoration: "none", color: "red" }}>{recipe.title}</ListGroupItem>
               <ListGroupItem style={{ color: "rgba(42, 25, 141, 0.767)" }}>{recipe.types}</ListGroupItem>
-              <ListGroupItem style={{ color: "rgba(94, 7, 79, 0.767)" }}>
+              <ListGroupItem style={{ color: "rgba(94, 7, 79, 0.767)" , maxHeight: 100, overflowY: "scroll"}}>
                 Ingredients:
                 <ul style={{ listStyle: "circle" }}>
                   {recipe.ingredients
