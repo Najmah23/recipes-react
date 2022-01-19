@@ -1,38 +1,274 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=The+Nautigal:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=The+Nautigal:wght@400;700&display=swap');
+
+body {
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* navbar */
+.navsty {
+    font-family: cursive;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+/*   خلفية للكارد نفسها */
+/* .imgbak{
+    background:url("./img/diet.png") center/cover no-repeat ;
+    
+} */
+
+/*one recipe/للكارد في  */
+.onrecipe {
+    margin-left: 140px;
+    padding-top: 60px;
+
+}
+
+/* عنوان الكومنت /Comments */
+.comment {
+    margin-left: 100px;
+    color: rgba(64, 224, 208, 0.829);
+}
+
+/* page signup */
+.SignUp {
+    font-family: monospace;
+    font-style: oblique;
+    font-weight: bolder;
+    color: rgba(36, 224, 77, 0.829);
+    background: url("./img/img4s.jpg") center/cover no-repeat;
+}
+
+.signup {
+    font-family: initial;
+    color: rgba(48, 48, 197, 0.815);
+}
+
+/* خلفية للوصفة الوحدة /oneRecipe */
+.CardoneRecipe {
+    background: url("./img/loding.jpg") center/cover no-repeat;
+
+}
+
+
+/*  page loding  */
+.Loding {
+    font-family: 'The Nautigal', cursive;
+    color: red;
+    font-size: 100px;
+    position: absolute;
+    z-index: 0;
+    margin-left: 600px;
+    margin-top: 240px;
+}
+
+.Lodingimg {
+    background: url("./img/loding.jpg")center/cover no-repeat;
+    height: 600px;
+    position: relative;
+    z-index: -1;
+
+}
+
+/* recipe type  */
+.recipeTitle {
+    font-family: 'Dancing Script', cursive;
+    color: #AD7D52;
+
+}
+
+/* all recipe title */
+.Allrecipe {
+    font-family: serif;
+    text-align: center;
+    color: #AD7D52;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+
+}
+
+/* -------All Recipe--------- */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+/*  All recipe المسافه بين الكارد في  */
+
+.cardsLI {
+    margin-bottom: 50px;
+
+}
+
+/* للصوره في  */
+.card__img {
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+
+}
+
+/* العنوان والنوع */
+.card__info-hover {
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+    opacity: 0.9;
+    top: 0;
+}
+
+/*  recipelist  للصوره */
+.card__img--hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 235px;
+    top: 0;
+
+}
+
+/* العنوان والنوع */
+.card__info {
+    z-index: 2;
+    background-color: rgba(248, 250, 243, 0.616);
+    padding: 16px 24px 24px 24px;
+}
+
+/* للنوع في رسبي لست */
+.card__category {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #f38686;
+}
+
+/* للعنوان في الرسبي لست */
+.card__title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* الكلوري في الرسبي لست */
+.card__by {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: #AD7D52;
+}
+
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.5;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}
+
+/* --------profile-------- */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body.profile {
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Roboto, Helvetica, Arial, serif;
+    background-size: cover;
+}
+/*  ستايل صورة المستخدم  */
+header img {
+    border-radius: 250px;
+    margin: 15px auto;
+    display: block;
+    width: 220px;
+    border: 3px solid #fff;
+}
+/* الباكراوند للمستخدم */
+aside {
+    border-radius: 50%;
+    margin: 0 auto;
+    height: 250px;
+    width: 250px;
+    background:url("./img/loding.jpg")center/cover no-repeat ;
+    background-size: cover;
+    overflow: hidden;
+    transition: all ease 0.3s;
+    margin-top: 30px;
+}
+/* الباكراوند للمستخدم */
+aside:hover {
+    border-radius: 5px;
+    height: 480px;
+    width: 350px;
+    box-shadow: 0 0 70px 10px #fff;
+}
+/*  ستايل صورة المستخدم  */
+aside:hover header img {
+    animation: profile_image 2000ms linear both;
+    animation-delay: 0.5s;
+}
+/* ستايل الكارد كامل */
+header {
+    text-align: center;
+}
+/* ستايل الاسم */
+header h1 {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 25px;
+    line-height: 25px;
+    display: inline-block;
+    padding: 10px;
+    transition: all ease 0.250s;
+    border-bottom: 1px solid #fff;
+}
+
+header h2 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 17px;
+}
+/* button */
+
+.profileButtn {
+    margin-top: 40px;
+    opacity: 0;
+    transition: all linear 1.5s;
+
+    
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  
+  aside:hover .profileButtn {
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .profileButtn p:first-child {
+    text-align: center;
+    font-size: 16px;
   }
-}
+  
+  
+  
+  
+
+
+
