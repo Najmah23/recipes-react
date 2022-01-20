@@ -1,5 +1,7 @@
 import { useContext } from "react"
-import { Col, Form, Modal, Row ,Button} from "react-bootstrap"
+import { Col, Form, Modal, Row, Button } from "react-bootstrap"
+import { AiOutlineCloseSquare } from "react-icons/ai"
+import { MdOutlineFileDownloadDone } from "react-icons/md"
 import RecipesContext from "../utils/RecipesContext"
 
 function EditProfile(props) {
@@ -18,7 +20,7 @@ function EditProfile(props) {
               <Form.Label>First Name</Form.Label>
             </Row>
             <Col md="10">
-              <Form.Control type="text" name="firstName" defaultValue={profile.firstName}/>
+              <Form.Control type="text" name="firstName" defaultValue={profile.firstName} />
             </Col>
           </Form.Group>
           <Form.Group as={Row} className="mb-3">
@@ -35,7 +37,7 @@ function EditProfile(props) {
               <Form.Label>Password</Form.Label>
             </Row>
             <Col md="10">
-              <Form.Control type="password" name="password" defaultValue={profile.password}/>
+              <Form.Control type="password" name="password" defaultValue={profile.password} />
             </Col>
           </Form.Group>
           <Form.Group as={Row} className="mb-3">
@@ -43,16 +45,16 @@ function EditProfile(props) {
               <Form.Label> Avatar </Form.Label>
             </Row>
             <Col md="10">
-              <Form.Control type="url" name="avatar"defaultValue={profile.avatar} />
+              <Form.Control type="url" name="avatar" defaultValue={profile.avatar} />
             </Col>
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="outline-secondary" onClick={() => setShow(false)}>
-            Close
+            <AiOutlineCloseSquare />
           </Button>
           <Button variant="outline-success" type="submit" onClick={() => setShow(false)}>
-            Confirm Edit
+          <MdOutlineFileDownloadDone/>
           </Button>
         </Modal.Footer>
       </Form>

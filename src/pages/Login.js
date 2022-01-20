@@ -1,5 +1,7 @@
 import { useContext } from "react"
 import { Col, Form, Modal, Row, Button } from "react-bootstrap"
+import { AiOutlineCloseSquare } from "react-icons/ai"
+import { GoSignIn } from "react-icons/go"
 import RecipesContext from "../utils/RecipesContext"
 
 function Login() {
@@ -14,11 +16,11 @@ function Login() {
             handleCloseLogin()
           }}
         >
-          <Modal.Header closeButton>
+          <Modal.Header closeButton className="login">
             <Modal.Title> Log in </Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            <Form.Group as={Row} className="mb-3 ">
+          <Modal.Body className="LogIn">
+            <Form.Group as={Row} className="mb-3" >
               <Row>
                 <Form.Label>Email</Form.Label>
               </Row>
@@ -35,12 +37,12 @@ function Login() {
               </Col>
             </Form.Group>
           </Modal.Body>
-          <Modal.Footer>
-            <Button variant="outline-warning" type="submit">
-              Log in
+          <Modal.Footer className="loginBut">
+            <Button variant="outline-success" type="submit">
+            <GoSignIn/>
             </Button>
             <Button onClick={handleCloseLogin} variant="outline-secondary">
-              Close
+            <AiOutlineCloseSquare/>
             </Button>
           </Modal.Footer>
         </Form>

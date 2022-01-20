@@ -7,25 +7,19 @@
 body {
     overflow-x: hidden;
 }
+.logo12{
+    color: orangered;
+}
 
 /* navbar */
 .navsty {
     font-family: cursive;
-
 }
-
-
-/*   خلفية للكارد نفسها */
-/* .imgbak{
-    background:url("./img/diet.png") center/cover no-repeat ;
-    
-} */
 
 /*one recipe/للكارد في  */
 .onrecipe {
     margin-left: 140px;
     padding-top: 60px;
-
 }
 
 /* عنوان الكومنت /Comments */
@@ -39,13 +33,34 @@ body {
     font-family: monospace;
     font-style: oblique;
     font-weight: bolder;
-    color: rgba(36, 224, 77, 0.829);
-    background: url("./img/img4s.jpg") center/cover no-repeat;
+    color: rgba(55, 56, 50, 0.829);
+    background: url("./img/ss.webp") center/cover no-repeat;
 }
 
 .signup {
     font-family: initial;
-    color: rgba(48, 48, 197, 0.815);
+    color: rgba(228, 155, 20, 0.815);
+}
+
+/* --login page */
+.LogIn {
+    font-family: monospace;
+    font-style: oblique;
+    font-weight: bolder;
+    color: rgb(240, 177, 20);
+    background: url("./img/login33.jpg") center/cover no-repeat;
+
+}
+
+.login {
+    font-family: initial;
+    color: olivedrab;
+
+}
+
+/* Add recipe model */
+.AddrecipeMod {
+    background: url("./img/addRecipe.webp") center/cover no-repeat;
 }
 
 /* خلفية للوصفة الوحدة /oneRecipe */
@@ -53,7 +68,6 @@ body {
     background: url("./img/loding.jpg") center/cover no-repeat;
 
 }
-
 
 /*  page loding  */
 .Loding {
@@ -74,12 +88,6 @@ body {
 
 }
 
-/* recipe type  */
-.recipeTitle {
-    font-family: 'Dancing Script', cursive;
-    color: #AD7D52;
-
-}
 
 /* all recipe title */
 .Allrecipe {
@@ -88,6 +96,13 @@ body {
     color: #AD7D52;
     font-family: 'Dancing Script', cursive;
     font-size: 40px;
+
+}
+
+/* recipe type  */
+.recipeTitle {
+    font-family: 'Dancing Script', cursive;
+    color: #AD7D52;
 
 }
 
@@ -100,6 +115,8 @@ body {
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
 /*  All recipe المسافه بين الكارد في  */
+
+
 
 .cardsLI {
     margin-bottom: 50px;
@@ -185,28 +202,56 @@ body {
     opacity: 1;
 }
 
-/* --------profile--------.................. */
-.Allprofile{
-    background-color: aquamarine;
+.card__by {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: #AD7D52;
 }
+
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.6;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+
+}
+
+.card:hover .card__info span {
+
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card:hover .card__info h6 {
+
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}
+
+/* --------profile--------.................. */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 body.profile {
-    /* padding: 20px;
-    box-sizing: border-box;
-    font-family: Roboto, Helvetica, Arial, serif;
-    background-size: cover; */
+
     padding: 20px;
     box-sizing: border-box;
     font-family: Roboto, Helvetica, Arial, serif;
-    background: url(http://www.hdwallsource.com/img/2014/10/blurred-36379-37207-hd-wallpapers.jpg);
+    /* background: url(http://www.hdwallsource.com/img/2014/10/blurred-36379-37207-hd-wallpapers.jpg); */
     background-size: cover;
 }
 
 /*  ستايل صورة المستخدم  */
 header img {
-    
+
     border-radius: 50%;
     margin: 20px auto;
     display: block;
@@ -231,13 +276,6 @@ aside {
     margin-top: 30px;
 }
 
-aside:hover {
-    border-radius: 5px;
-    height: 480px;
-    width: 350px;
-    box-shadow: 0 0 70px 10px #fff;
-}
-
 /* الباكراوند للمستخدم */
 aside:hover {
     border-radius: 5px;
@@ -248,7 +286,7 @@ aside:hover {
 
 /*  ستايل صورة المستخدم  */
 aside:hover header img {
-    animation: profile_image 2000ms linear both;
+    animation: 2000ms linear both;
     animation-delay: 0.5s;
 }
 
@@ -263,9 +301,9 @@ header {
 header h1 {
     position: relative;
     text-align: center;
-    color: #fff;
+    color: rgb(240, 177, 20);
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
-    font-size: 25px;
+    font-size: 20px;
     line-height: 25px;
     display: inline-block;
     padding: 10px;
@@ -282,27 +320,19 @@ aside:hover header h1 {
 
 header h2 {
     text-align: center;
-    color: #fff;
+    color: olivedrab;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
     font-size: 17px;
-    font-weight: normal;
     line-height: 0px;
     margin: 0;
 }
 
-aside:hover header h2 {
-    opacity: 1;
-}
+
 
 /* button */
-
-.profileButtn {
-    margin-top: 50px;
-    transition: all linear 1.5s;
-    opacity: 0;
-
+.btnprofilee {
+    margin-left: 656px;
+    margin-top: 8px;
 }
 
-aside:hover .profileButtn {
-    opacity: 1;
-}
+/* --------------------- */

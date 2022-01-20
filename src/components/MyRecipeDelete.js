@@ -1,5 +1,7 @@
 import { useContext } from "react"
 import { Button, Modal } from "react-bootstrap"
+import { AiOutlineCloseSquare } from "react-icons/ai"
+import { MdOutlineFileDownloadDone } from "react-icons/md"
 import RecipesContext from "../utils/RecipesContext"
 
 function MyRecipeDelete(props) {
@@ -12,11 +14,11 @@ function MyRecipeDelete(props) {
       </Modal.Header>
       <Modal.Body>Are you sure to delete this recipe ?</Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={() => setShow(false)}>
-          Cancel
+        <Button variant="outline-secondary" onClick={() => setShow(false)}>
+        <AiOutlineCloseSquare/>
         </Button>
-        <Button variant="danger" onClick={() => deleteRecipe(recipeId)}>
-          Confirm
+        <Button variant="outline-danger" onClick={() => deleteRecipe(recipeId)}>
+          <MdOutlineFileDownloadDone/>
         </Button>
       </Modal.Footer>
     </Modal>

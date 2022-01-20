@@ -1,6 +1,8 @@
 import { useContext } from "react"
 import { Button, Col, Form, Modal, Row } from "react-bootstrap"
+import { AiOutlineCloseSquare } from "react-icons/ai"
 import RecipesContext from "../utils/RecipesContext"
+import {MdOutlineFileDownloadDone} from "react-icons/md"
 
 function EditComment(props) {
   const { show, setShow,comment,recipe } = props
@@ -23,10 +25,10 @@ function EditComment(props) {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="outline-secondary" onClick={() => setShow(false)}>
-            Close
+          <AiOutlineCloseSquare/>
           </Button>
           <Button variant="outline-success" type="submit" onClick={() => setShow(false)}>
-            Confirm Edit
+           <MdOutlineFileDownloadDone/>
           </Button>
         </Modal.Footer>
       </Form>

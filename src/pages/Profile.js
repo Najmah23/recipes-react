@@ -22,7 +22,7 @@ function Profile() {
       </div>
     )
   return (
-    <Col className="Allprofile"> 
+    <Col className="Allprofile">
       <div className="body.profile">
         <aside class="profile-card">
           <header>
@@ -32,19 +32,19 @@ function Profile() {
             </h1>
             <h2>- {profile.email} -</h2>
           </header>
-          <div className="profileButtn">
-            <Button variant="secondary" className="ms-5 mb-2" onClick={() => setEditShow(true)}>
-              Edit Profile-
-              <FiEdit />
-            </Button>
-            <Button variant="success" onClick={() => setShow(true)} className="ms-4 mb-2">
-              Add Recipe-
-              <MdAddComment />
-            </Button>
-          </div>
         </aside>
-        <EditProfile show={editShow} setShow={setEditShow} profile={profile} />
       </div>
+      <div className="btnprofilee">
+        <Button variant="outline-warning" className="ms-5 mb-2" onClick={() => setEditShow(true)}>
+          
+          <FiEdit />
+        </Button>
+        <Button variant="outline-success" onClick={() => setShow(true)} className="ms-4 mb-2">
+          
+          <MdAddComment />
+        </Button>
+      </div>
+      <EditProfile show={editShow} setShow={setEditShow} profile={profile} />
 
       <Container>
         <Row className="mt-5">

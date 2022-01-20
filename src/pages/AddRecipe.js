@@ -1,6 +1,8 @@
 import { useContext,  } from "react"
 import { Button, Col, Form, Modal, Row } from "react-bootstrap"
 import RecipesContext from "../utils/RecipesContext"
+import{FiEdit} from "react-icons/fi"
+import { AiOutlineCloseSquare } from "react-icons/ai"
 
 function AddRecipe(props) {
   const { show, setShow } = props
@@ -16,7 +18,7 @@ function AddRecipe(props) {
         <Modal.Header closeButton>
           <Modal.Title>Add Recipe</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="AddrecipeMod">
           <Form.Group as={Row} className="mb-3">
             <Form.Label column md="3">
               Title
@@ -73,10 +75,10 @@ function AddRecipe(props) {
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShow(false)}>
-            Close
+          <Button variant="outline-secondary" onClick={() => setShow(false)}>
+          <AiOutlineCloseSquare/>
           </Button>
-          <Button variant="outline-primary" type="submit" onClick={() => setShow(false)}>
+          <Button variant="outline-success" type="submit" onClick={() => setShow(false)}>
             Add Recipe
           </Button>
         </Modal.Footer>

@@ -28,7 +28,7 @@ function RecipesList(props) {
       </Row>
       <Row md="4">
         {recipeTypes.map(recipe => (
-          <div >
+          <div>
             <section class="cardsLI">
               <article class="card card--1">
                 <div class="card__img" />
@@ -47,6 +47,7 @@ function RecipesList(props) {
           </div>
         ))}
       </Row>
+      
     </>
   )
 }

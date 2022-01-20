@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { Card, Col, Button, ListGroupItem, ListGroup } from "react-bootstrap"
+import { AiOutlineDelete } from "react-icons/ai"
+import { FiEdit } from "react-icons/fi"
 import { Link } from "react-router-dom"
 import MyRecipeDelete from "../components/MyRecipeDelete"
 import MyRecipeEdit from "../components/MyRecipeEdit"
@@ -51,10 +53,10 @@ function MyRecipeItem(props) {
           </Link>
           <Card.Footer>
             <Button variant="outline-warning" className="me-3" onClick={() => setEditShow(true)}>
-              Edit...
+            <FiEdit/>
             </Button>
             <Button variant="outline-danger" className="me-3" onClick={() => setDeleteShow(true)}>
-              Delete
+            <AiOutlineDelete/>
             </Button>
           </Card.Footer>
         </Card>
