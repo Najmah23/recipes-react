@@ -7,13 +7,15 @@
 body {
     overflow-x: hidden;
 }
-.logo12{
+
+.logo12 {
     color: orangered;
 }
 
 /* navbar */
 .navsty {
     font-family: cursive;
+    color:rgba(241, 160, 37, 0.979);
 }
 
 /*one recipe/للكارد في  */
@@ -25,7 +27,8 @@ body {
 /* عنوان الكومنت /Comments */
 .comment {
     margin-left: 100px;
-    color: rgba(64, 224, 208, 0.829);
+    color: #AD7D52;
+    font-Family:cursive;
 }
 
 /* page signup */
@@ -48,7 +51,7 @@ body {
     font-style: oblique;
     font-weight: bolder;
     color: rgb(240, 177, 20);
-    background: url("./img/login33.jpg") center/cover no-repeat;
+    background: url("./img/login336.jpg") center/cover no-repeat;
 
 }
 
@@ -58,10 +61,7 @@ body {
 
 }
 
-/* Add recipe model */
-.AddrecipeMod {
-    background: url("./img/addRecipe.webp") center/cover no-repeat;
-}
+
 
 /* خلفية للوصفة الوحدة /oneRecipe */
 .CardoneRecipe {
@@ -114,9 +114,41 @@ body {
 /* -------All Recipe--------- */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
+
+/* add recipe model  */
+.AddRecipeM {
+    font-family: monospace;
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 19px;
+    color: olivedrab;
+    background: url("./img/addrecipe3.jpg")center/cover no-repeat
+}
+
+.addrecipem {
+    font-family: initial;
+    font-weight: bolder;
+    color: rgb(240, 177, 20);
+}
+
+/* edit recipe Modei */
+.EditRecipeM {
+    font-family: monospace;
+    font-style: oblique;
+    font-size: 19px;
+    color: rgb(240, 236, 38);
+    background: url("./img/lemon.jpg")center/cover no-repeat
+}
+
+.editrecipem {
+    font-family: initial;
+    font-weight: bolder;
+    color: rgba(165, 42, 42, 0.856);
+    margin-left: 40px;
+    font-size: 20px;
+}
+
 /*  All recipe المسافه بين الكارد في  */
-
-
 
 .cardsLI {
     margin-bottom: 50px;
@@ -240,12 +272,33 @@ body {
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
+/* edit profile model */
+
+.EditProfileM {
+    font-family: monospace;
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 17px;
+    color: olivedrab;
+    background: url("./img/addrecipe3.jpg")center/cover no-repeat
+}
+
+.editprofilem {
+    font-family: initial;
+    font-weight: bolder;
+    color: rgb(240, 177, 20);
+    margin-left: 16px;
+
+
+}
+
+/* --------- */
+
 body.profile {
 
     padding: 20px;
     box-sizing: border-box;
     font-family: Roboto, Helvetica, Arial, serif;
-    /* background: url(http://www.hdwallsource.com/img/2014/10/blurred-36379-37207-hd-wallpapers.jpg); */
     background-size: cover;
 }
 
@@ -256,7 +309,7 @@ header img {
     margin: 20px auto;
     display: block;
     width: 200px;
-    border: 3px solid #fff;
+    border: 3px solid  rgb(240, 177, 20);
 }
 
 /* الباكراوند للمستخدم */
@@ -281,7 +334,7 @@ aside:hover {
     border-radius: 5px;
     height: 480px;
     width: 350px;
-    box-shadow: 0 0 70px 10px #fff;
+    box-shadow: 0 0 70px 10px rgba(106, 142, 35, 0.952);
 }
 
 /*  ستايل صورة المستخدم  */
@@ -308,13 +361,12 @@ header h1 {
     display: inline-block;
     padding: 10px;
     transition: all ease 0.250s;
-    border-bottom: 1px solid #fff;
 }
 
 aside:hover header h1 {
     margin-top: 0px;
     outline: 0 solid #fff;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgb(46, 25, 20);
 
 }
 

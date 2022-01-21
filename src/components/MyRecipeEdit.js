@@ -10,10 +10,11 @@ function MyRecipeEdit(props) {
   return (
     <Modal show={show} onHide={() => setShow(false)}>
       <Form className="mt-5" onSubmit={e => editRecipe(e, recipe._id)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Edit Recipe</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
+        <Modal.Title closeButton className="editrecipem ">
+          Edit Recipe
+        </Modal.Title>
+
+        <Modal.Body className="EditRecipeM">
           <Form.Group as={Row} className="mb-3">
             <Form.Label column md="3">
               Title
@@ -43,7 +44,7 @@ function MyRecipeEdit(props) {
               Steps
             </Form.Label>
             <Col md="8">
-              <Form.Control as="textarea" name="steps" defaultValue={recipe.steps}  />
+              <Form.Control as="textarea" name="steps" defaultValue={recipe.steps} />
             </Col>
           </Form.Group>
           <Form.Group as={Row} className="mb-3">
@@ -71,11 +72,10 @@ function MyRecipeEdit(props) {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="outline-secondary" onClick={() => setShow(false)}>
-          <AiOutlineCloseSquare/>
-
+            <AiOutlineCloseSquare />
           </Button>
           <Button variant="outline-success" type="submit" onClick={() => setShow(false)}>
-           <MdOutlineFileDownloadDone/>
+            <MdOutlineFileDownloadDone />
           </Button>
         </Modal.Footer>
       </Form>

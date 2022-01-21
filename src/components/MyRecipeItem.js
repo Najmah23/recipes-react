@@ -45,7 +45,7 @@ function MyRecipeItem(props) {
                       .map(step => (
                         <li>{step}</li>
                       ))}
-                  </ul>{" "}
+                  </ul>
                 </ListGroupItem>
               ) : null}
               <ListGroupItem style={{ color: "rgba(223, 120, 35, 0.932)" }}>Calories:{recipe.calories}</ListGroupItem>

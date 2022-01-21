@@ -11,10 +11,11 @@ function EditProfile(props) {
   return (
     <Modal show={show} onHide={() => setShow(false)}>
       <Form className="mt-5" onSubmit={e => editProfile(e)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Edit Profile </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
+        <Modal.Title closeButton className="editprofilem">
+          Edit Profile{" "}
+        </Modal.Title>
+
+        <Modal.Body className="EditProfileM">
           <Form.Group as={Row} className="mb-3">
             <Row>
               <Form.Label>First Name</Form.Label>
@@ -54,7 +55,7 @@ function EditProfile(props) {
             <AiOutlineCloseSquare />
           </Button>
           <Button variant="outline-success" type="submit" onClick={() => setShow(false)}>
-          <MdOutlineFileDownloadDone/>
+            <MdOutlineFileDownloadDone />
           </Button>
         </Modal.Footer>
       </Form>

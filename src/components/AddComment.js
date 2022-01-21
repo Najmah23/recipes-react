@@ -25,14 +25,14 @@ function AddComment(props) {
               flexDirection: "column",
             }}
           >
-            <h3 style={{ color: "rgba(44, 197, 197, 0.753)", textAlign: "center" }}>Add Comment</h3>
-            <Form.Label className="mt-4" style={{ color: "rgba(44, 228, 228, 0.849)", fontSize: "20px" }}>
+            <h3 style={{ color: "rgba(241, 160, 37, 0.979)", textAlign: "center",fontFamily:"cursive" }}>Add Comment</h3>
+            <Form.Label className="mt-4 " style={{ color: "rgba(241, 160, 37, 0.979)", fontSize: "21px" , marginLeft:"15px"}}>
               Comment <AiOutlineComment/>
             </Form.Label>
-            <Form.Control as="textarea" name="comment" style={{ width: "370px",backgroundColor:"rgba(252, 255, 246, 0.603)"}} required />
+            <Form.Control as="textarea" name="comment" style={{ width: "370px",backgroundColor:"rgba(252, 255, 246, 0.603)",fontFamily:"cursive"}} required />
           </div>
 
-          <Button variant="outline-info" type="submit" className="ms-4 mb-2">
+          <Button variant="outline-warning" type="submit" className="ms-4 mb-2">
             <MdAddComment/>
           </Button>
         </Form.Group>

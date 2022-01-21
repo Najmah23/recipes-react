@@ -15,10 +15,10 @@ function AddRecipe(props) {
           addRecipe(e)
         }}
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton className="addrecipem">
           <Modal.Title>Add Recipe</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="AddrecipeMod">
+        <Modal.Body className="AddRecipeM">
           <Form.Group as={Row} className="mb-3">
             <Form.Label column md="3">
               Title

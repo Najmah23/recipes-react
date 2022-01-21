@@ -26,7 +26,7 @@ function CommentItem(props) {
         </Row>
 
         <Card.Footer style={{margin:"auto" ,backgroundColor:"rgba(216, 218, 219, 0.418)"}}>
-          <Button variant="outline-success"  className="me-2  " onClick={() => setEditShow(true)}>
+          <Button variant="outline-warning"  className="me-2  " onClick={() => setEditShow(true)}>
             <FiEdit />
           </Button>
           <Button variant="outline-danger" className="me-2" onClick={() => setDeleteShow(true)}>
