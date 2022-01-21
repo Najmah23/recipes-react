@@ -24,7 +24,7 @@ function MyRecipeItem(props) {
             <ListGroup className="imagCard">
               <ListGroupItem style={{ textDecoration: "none", color: "red" }}>{recipe.title}</ListGroupItem>
               <ListGroupItem style={{ color: "rgba(42, 25, 141, 0.767)" }}>{recipe.types}</ListGroupItem>
-              <ListGroupItem style={{ color: "rgba(94, 7, 79, 0.767)" , maxHeight: 100, overflowY: "scroll"}}>
+              <ListGroupItem style={{ color: "rgba(94, 7, 79, 0.767)" , maxHeight: 125, overflowY: "scroll"}}>
                 Ingredients:
                 <ul style={{ listStyle: "circle" }}>
                   {recipe.ingredients
@@ -36,7 +36,7 @@ function MyRecipeItem(props) {
                 </ul>
               </ListGroupItem>
               {recipe.steps ? (
-                <ListGroupItem style={{ color: "rgba(73, 109, 7, 0.932)", maxHeight: 100, overflowY: "scroll" }}>
+                <ListGroupItem style={{ color: "rgba(73, 109, 7, 0.932)", maxHeight: 125, overflowY: "scroll" }}>
                   Steps:
                   <ul style={{ listStyle: "auto" }}>
                     {recipe.steps
