@@ -40,7 +40,7 @@ function MyRecipeItem(props) {
                   Steps:
                   <ul style={{ listStyle: "auto" }}>
                     {recipe.steps
-                      .split(".")
+                      .split("*")
                       .slice(1)
                       .map(step => (
                         <li>{step}</li>
