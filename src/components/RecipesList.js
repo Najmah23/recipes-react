@@ -33,7 +33,7 @@ function RecipesList(props) {
               <article class="card card--1">
                 <div class="card__img" />
                 <a href={`/recipes/${recipe._id}`}>
-                  <img class="card__img--hover" variant="top" src={recipe.photo} />
+                  <img class="card__img--hover" variant="top" src={recipe.photo} height="200px" style={{ objectFit: "cover" }}/>
                 </a>
                 <div class="card__info">
                   <span class="card__category"> {recipe.types}</span>
