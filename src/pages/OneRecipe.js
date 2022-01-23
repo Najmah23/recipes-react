@@ -37,7 +37,7 @@ function OneRecipe() {
           >
             <Card>
               <Card.Img variant="top" src={recipe.photo} height="200px" style={{ objectFit: "cover" }} />
-              <ListGroup >
+              <ListGroup>
                 <ListGroupItem style={{ textDecoration: "none", color: "red" }}>{recipe.title}</ListGroupItem>
                 <ListGroupItem style={{ color: "rgba(42, 25, 141, 0.767)" }}>{recipe.types}</ListGroupItem>
                 <ListGroupItem style={{ color: "rgba(94, 7, 79, 0.767)", maxHeight: 200, overflowY: "scroll" }}>
@@ -79,7 +79,9 @@ function OneRecipe() {
         </Col>
         {localStorage.tokenRecipes ? (
           <Col>
-            <h3 className="comment mt-4">Comments <AiOutlineComment/></h3>
+            <h3 className="comment mt-4">
+              Comments <AiOutlineComment />
+            </h3>
             {recipe.comments.map(comment => (
               <CommentItem comment={comment} recipe={recipe} />
             ))}
