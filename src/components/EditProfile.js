@@ -12,7 +12,7 @@ function EditProfile(props) {
     <Modal show={show} onHide={() => setShow(false)}>
       <Form className="mt-5" onSubmit={e => editProfile(e)}>
         <Modal.Title closeButton className="editprofilem">
-          Edit Profile{" "}
+          Edit Profile
         </Modal.Title>
 
         <Modal.Body className="EditProfileM">
@@ -46,7 +46,7 @@ function EditProfile(props) {
               <Form.Label> Avatar </Form.Label>
             </Row>
             <Col md="10">
-              <Form.Control type="url" name="avatar" defaultValue={profile.avatar} />
+              <Form.Control type="file" name="avatar" />
             </Col>
           </Form.Group>
         </Modal.Body>

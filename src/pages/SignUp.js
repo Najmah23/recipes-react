@@ -62,7 +62,7 @@ function SignUp() {
                 <Form.Label> Avatar </Form.Label>
               </Row>
               <Col md="10">
-                <Form.Control type="url" name="avatar" required />
+                <Form.Control type="file" name="avatar" required />
               </Col>
             </Form.Group>
           </Modal.Body>

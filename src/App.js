@@ -34,7 +34,7 @@ function App() {
   const handleCloseLogin = () => {
     setShowLogin(false)
   }
-  
+
   // ------------Recipes--api
   const getRecipes = async () => {
     const response = await axios.get("https://recipes-api-1.herokuapp.com/api/recipes")
@@ -56,15 +56,22 @@ function App() {
     getRecipes()
   }
   // --------edit profile------
-  const editProfile = async (e) => {
+  const editProfile = async e => {
     e.preventDefault()
     try {
       const form = e.target
 
+      const image = form.elements.avatar.files[0]
+      let imageUrl
+      if (image) {
+        const imageRef = firebase.storage().ref("images").child(`${image.lastModified}-${image.name}`)
+        await imageRef.put(image)
+        imageUrl = await imageRef.getDownloadURL()
+      }
       const profileBody = {
         firstName: form.elements.firstName.value,
         lastName: form.elements.lastName.value,
-        avatar: form.elements.avatar.value,
+        avatar: imageUrl,
         password: form.elements.password.value,
       }
 
@@ -86,16 +93,25 @@ function App() {
     e.preventDefault()
     try {
       const form = e.target
+
+      const image = form.elements.avatar.files[0]
+      let imageUrl
+      if (image) {
+        const imageRef = firebase.storage().ref("images").child(`${image.lastModified}-${image.name}`)
+        await imageRef.put(image)
+        imageUrl = await imageRef.getDownloadURL()
+      }
       const userBody = {
         firstName: form.elements.firstName.value,
         lastName: form.elements.lastName.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
-        avatar: form.elements.avatar.value,
+        avatar: imageUrl,
       }
 
       await axios.post("https://recipes-api-1.herokuapp.com/api/auth/signup", userBody)
-      console.log("signup success")
+
+      toast.success("signup success")
     } catch (error) {
       if (error.response) console.log(error.response.data)
       else console.log(error)
@@ -116,7 +132,7 @@ function App() {
 
       const token = response.data
       localStorage.tokenRecipes = token
-      console.log("login success")
+      toast.success("login success")
       getProfile()
       navigate("/")
     } catch (error) {
@@ -259,11 +275,15 @@ function App() {
       }
 
       form.reset()
-      await axios.put(`https://recipes-api-1.herokuapp.com/api/recipes/${recipeId}/comments/${commentId}`, commentBody, {
-        headers: {
-          Authorization: localStorage.tokenRecipes,
-        },
-      })
+      await axios.put(
+        `https://recipes-api-1.herokuapp.com/api/recipes/${recipeId}/comments/${commentId}`,
+        commentBody,
+        {
+          headers: {
+            Authorization: localStorage.tokenRecipes,
+          },
+        }
+      )
       getRecipes()
       toast.success("edit success")
     } catch (error) {
@@ -326,7 +346,6 @@ function App() {
     deleteComment,
     likeRecipe,
     editProfile,
-    
   }
 
   return (
