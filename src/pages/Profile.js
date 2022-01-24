@@ -26,7 +26,7 @@ function Profile() {
       <div className="body.profile">
         <aside class="profile-card">
           <header>
-            <img variant="top" src={profile.avatar} />
+            <img variant="top" src={profile.avatar} height="200px" style={{ objectFit: "cover" }} />
             <h1>
               {profile.firstName} {profile.lastName}
             </h1>
@@ -36,11 +36,9 @@ function Profile() {
       </div>
       <div className="btnprofilee">
         <Button variant="outline-warning" className="ms-5 mb-2" onClick={() => setEditShow(true)}>
-          
           <FiEdit />
         </Button>
         <Button variant="outline-success" onClick={() => setShow(true)} className="ms-4 mb-2">
-          
           <MdAddComment />
         </Button>
       </div>
